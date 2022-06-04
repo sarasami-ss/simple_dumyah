@@ -5,20 +5,20 @@
 $this->title = 'Display kids items';
 
 echo '<div class="img_container">';
-foreach($items as $key => $value) {
+// foreach($items as $key => $value) {
 
 
-    if(isset($value->href)) {
+    if(isset($model->href)) {
         echo '<div class="product-wrapper"> 
-        <a href=' . $value->href . 'target="_blank"/>
-        <img class ="img_item" alt="Qries" src=' . $value->image . '>
+        <a href=' . $model->href . 'target="_blank"/>
+        <img class ="img_item" alt="Qries" src=' . $model->image . '>
         </a>    
         <div class="product-details"> 
         <div class="caption">
         <div class="price"> 
-        <span class="price-new">' . floatval($value->price) . '<span class="currency">' . $value->currency. '</span></span>' .'
+        <span class="price-new">' . floatval($model->price) . '<span class="currency">' . $model->currency. '</span></span>' .'
         <div class="description">
-        <a class="description_specs" href=' . $value->href . 'target="_blank"/>' . $value->name . '</a>' . '
+        <a class="description_specs" href=' . $model->href . 'target="_blank"/>' . $model->name . '</a>' . '
         </div>
         </div>
         </div>
@@ -26,9 +26,9 @@ foreach($items as $key => $value) {
         </div>';
         
         
+// }
 }
-}
-echo '</div>;'
+echo '</div>'
 
 
 ?>
